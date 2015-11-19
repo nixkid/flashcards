@@ -27,15 +27,16 @@
 }
 
 .card {
-  height: 150px;
-  width: 200px;
   background-color: #f2580b;
-  border: none;
+  border: 0;
   color: #fff;
   cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.5s;
   display: inline-block;
+  font-size: 18px;
+  height: 150px;
+  transition: background-color 0.5s;
+  width: 200px;
+
   p {
     padding: 55px;
   }
