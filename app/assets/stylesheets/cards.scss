@@ -1,0 +1,14 @@
+// Place all the styles related to the cards_controller controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card {
+  height: 150px;
+  width: 100px;
+  background-color: #f2580b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.5s;
+}

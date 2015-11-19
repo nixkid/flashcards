@@ -1,0 +1,6 @@
+<h2> Все карты </h2>
+<% @cards.each do |card| %>
+<div>
+    <p><%= card.original_text + " " + card.translated_text %></p>
+</div>
+<% end %>
