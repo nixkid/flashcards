@@ -1,6 +1,5 @@
 <% @cards.each do |card| %>
   <div class="card">
-    <p><%= card.original_text %></p>
-    <p><%= card.translated_text %></p>
+    <p><%= card.original_text  + " " +  card.translated_text %></p>
   </div>
 <% end %>
