@@ -26,6 +26,20 @@
   border-bottom: 1px solid gray;
 }
 
+.card {
+  height: 150px;
+  width: 200px;
+  background-color: #f2580b;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.5s;
+  display: inline-block;
+  p {
+    padding: 55px;
+  }
+}
 /* MISC*/
 
 .clearfix:after {content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;} html[xmlns].clearfix{display:block;} * html .clearfix{height:1%;}
