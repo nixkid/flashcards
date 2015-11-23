@@ -1,6 +1,6 @@
 class CompareValidator < ActiveModel::Validator
   def validate(card)
-    if card.original_text.mb_chars.downcase.strip.normalize == card.translated_text.mb_chars.downcase.strip.normalize
+    if card.original_text.mb_chars.downcase.strip == card.translated_text.mb_chars.downcase.strip
         card.errors[:base] << 'Оригинальный и переведенный текст не должны быть равны'
     end
   end
