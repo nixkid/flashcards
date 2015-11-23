@@ -21,7 +21,7 @@ class CardsController < ApplicationController
     if @card.save
       redirect_to @card
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -39,7 +39,7 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
     @card.destroy
 
-    redirect_to cards.path
+    redirect_to cards_path
   end
 
   private
