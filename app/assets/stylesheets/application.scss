@@ -1,44 +1,68 @@
 @import "bootstrap";
 
-.container {
-  margin: 48px auto;
-  width: 960px;
+$orange: #f2580b;
+@mixin orange_background {
+  background-color: $orange;
+  border-color: $orange;
 }
-
-.container >  h1 {
-  float: left;
-  margin: 0;
-}
-
-.navigation-links li {
-  display: inline-block;
-  margin: 0 16px;
-  border: solid 1px black;
-  padding: 10px;
-  background-color: black;
-  a {
-    color: white;
-    text-decoration: none;
-  }
+body {
+  background-color: #eee;
+  font-family: 'Roboto', sans-serif;
 }
 
 .navbar-header {
   border-bottom: 1px solid gray;
 }
 
+.container {
+  margin: 48px auto;
+  width: 960px;
+
+  h1 {
+    float: left;
+    margin: 0;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+.navigation-links li {
+  display: inline-block;
+  margin: 0 16px;
+  border: solid 1px $orange;
+  padding: 10px;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+
 .card {
-  background-color: #f2580b;
+  background-color: $orange;
   border: 0;
-  color: #fff;
+  color: white;
   cursor: pointer;
   font-size: 18px;
   display: inline-block;
-  height: 150px;
+  height: 140px;
   transition: background-color 0.5s;
-  width: 200px;
+  width: 180px;
 
-  p {
-    padding: 55px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.btn-primary {
+  @include orange_background;
+
+  &:hover {
+    @include orange_background;
   }
 }
 /* MISC*/

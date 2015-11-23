@@ -1,0 +1,20 @@
+<%= simple_form_for @card do |f| %>
+  <% if @card.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@card.errors.count, "error") %>:
+    </div>
+    <ul>
+      <% @card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <%= f.input :original_text, label: 'Светлая сторона карточки' %>
+  <%= f.input :translated_text, label: 'Темная сторона карточки' %>
+  <%= f.submit 'Сохранить карточку', class: "btn btn-primary" %>
+  <%= link_to 'Назад', card_path(@card), class: "btn btn-primary" %>
+<% end %>
+

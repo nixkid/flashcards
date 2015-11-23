@@ -1,5 +1,12 @@
 <% @cards.each do |card| %>
   <div class="card">
-    <p><%= card.original_text  + " " +  card.translated_text %></p>
+    <%= card.original_text%>
+    <br />
+    <br />
+    <br />
+    <%= link_to "Показать карточку", card_path(card) %>
+    <%= link_to "Удалить карточку", card_path(card),
+        method: :delete,
+        data: { confirm: 'Вы уже выучили эту карточку?' }%>
   </div>
 <% end %>
