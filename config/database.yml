@@ -8,13 +8,15 @@ development:
   encoding: unicode
   database: flashcards_dev
   pool: 5
-  username: Macbook
-  password:
+  username: macbook
+  password: <%= ENV['PASSWORD'] %>
+  host:     <%= ENV['IP'] %>
 
 test:
   adapter: postgresql
   encoding: unicode
   database: flashcards_test
   pool: 5
-  username: Macbook
-  password:
+  username: macbook
+  password: <%= ENV['PASSWORD'] %>
+  host:     <%= ENV['IP'] %>
