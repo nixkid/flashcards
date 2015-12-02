@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <title>Флэшкарточкер</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -23,6 +23,15 @@
       </div>
     </nav>
   <div class="container">
+    
+      <% if flash[:notice] %>
+       <div class="alert alert-success"><%= flash[:notice] %></div>
+      <% end %>
+
+      <% if flash[:error] %>
+        <div class="alert alert-danger"><%= flash[:error] %></div>
+      <% end %>
+      
     <%= yield %>
   </div>
 </body>
