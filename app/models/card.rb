@@ -17,11 +17,11 @@ class Card < ActiveRecord::Base
     if self.translated_text.mb_chars.downcase.strip == translate.mb_chars.downcase.strip
       set_review_date
       self.save
+    else
+      false
     end
   end
-
-  private
-
+  
   def set_review_date
     self.review_date = Date.today + 3
   end
