@@ -15,7 +15,7 @@ class Card < ActiveRecord::Base
 
   def check_card(translate)
     if self.translated_text.mb_chars.downcase.strip == translate.mb_chars.downcase.strip
-      set_review_date
+      self.set_review_date
       self.save
     else
       false
@@ -23,7 +23,7 @@ class Card < ActiveRecord::Base
   end
   
   def set_review_date
-    self.review_date = Date.today + 3
+    self.review_date = Date.current + 3.days
   end
   
 end

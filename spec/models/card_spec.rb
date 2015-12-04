@@ -4,7 +4,7 @@ describe Card do
   
   before(:each) do
     @card = create(:card)
-    @review = Date.today + 3
+    @review = Date.current + 3.days
   end
 
   it "should set review date" do
@@ -13,7 +13,7 @@ describe Card do
   end
   
   it "should autoupdate review date after checking" do
-    @card.check_card(@card.original_text)
+    @card.check_card(@card.translated_text)
     expect(@card.review_date).to eq(@review)
   end
   
