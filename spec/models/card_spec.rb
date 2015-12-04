@@ -21,7 +21,7 @@ describe Card do
     expect(@card.check_card("Дом")).to be true
   end
   
-  it "checks right translation even with not right arguments" do
+  it "checks right translation even with not best arguments" do
     expect(@card.check_card("дОМ")).to be true
   end
   
