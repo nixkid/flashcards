@@ -14,10 +14,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.4'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'capybara'
+  
   gem 'byebug'
 
   gem 'web-console', '~> 2.0'
 
   gem 'spring'
 end
-

@@ -19,9 +19,7 @@ class Card < ActiveRecord::Base
       self.save
     end
   end
-
-  private
-
+  
   def set_review_date
     self.review_date = Date.today + 3
   end
