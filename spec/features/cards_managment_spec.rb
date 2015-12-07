@@ -7,8 +7,8 @@ describe "Card management", :type => :feature do
   it "User creates a new card" do
     visit new_card_path
 
-    fill_in "Светлая сторона карточки", with: "My Card"
-    fill_in "Темная сторона карточки", with: "Моя карта"
+    fill_in 'card_original_text', with: "My Card"
+    fill_in 'card_translated_text', with: "Моя карта"
     click_button "Сохранить карточку"
 
     expect(page).to have_text("Новая карточка создана")
