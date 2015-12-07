@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "Card management", :type => :feature do
     
-  let!(:card) {create :card}
+  let!(:card) { create :card }
   
   it "User creates a new card" do
     visit new_card_path
