@@ -7,6 +7,7 @@ class CompareValidator < ActiveModel::Validator
 end
 
 class Card < ActiveRecord::Base
+  belongs_to :user
   before_create :set_review_date
   validates :original_text, :translated_text, presence: true
   validates_with CompareValidator
