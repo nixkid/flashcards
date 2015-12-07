@@ -15,7 +15,7 @@ class Card < ActiveRecord::Base
 
   def check_card(translate)
     if self.translated_text.mb_chars.downcase.strip == translate.mb_chars.downcase.strip
-      self.set_review_date
+      set_review_date
       self.save
     else
       false
