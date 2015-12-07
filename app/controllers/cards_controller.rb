@@ -19,6 +19,7 @@ class CardsController < ApplicationController
     @card = Card.new(card_params)
 
     if @card.save
+      flash[:notice] = "Новая карточка создана"
       redirect_to @card
     else
       render :new
