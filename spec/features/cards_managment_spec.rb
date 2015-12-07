@@ -14,11 +14,11 @@ describe "Card management", :type => :feature do
     expect(page).to have_text("Новая карточка создана")
   end
   
-  #it "checks translation" do
-  #  visit root_path
-  #  
-  #  fill_in :translate, with: "Home"
-  #  click_button 'Проверить!'
-  #  expect(page).to eq root_path
-  #end
+  # it "checks translation" do
+  #   visit root_path
+  #   
+  #   fill_in :translate, with: "Home"
+  #   click_button 'Проверить!'
+  #   expect(page).to eq root_path
+  # end
 end
