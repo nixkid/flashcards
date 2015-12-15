@@ -7,7 +7,7 @@ class UserSessionsController < ApplicationController
 
   def create
     if @user = login(params[:email], params[:password])
-      redirect_to(root_path, notice: "Успешно зашли")
+      redirect_to(new_card_path, notice: "Успешно зашли")
     else
       flash.now[:error] = "Вы не смогли зайти"
       render action: 'new'

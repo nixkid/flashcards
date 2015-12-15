@@ -31,7 +31,6 @@ describe Card do
   
   subject { @card }
 
-  it { should respond_to(:content) }
   it { should respond_to(:user_id) }
   
 end

@@ -1,5 +1,5 @@
 <%= simple_form_for @user do |f| %>
-  <%= render shared/errors %>
+  <%= render 'shared/errors' %>
   
   <%= f.input :email, label: 'Введите емэйл' %>
   <%= f.input :password, label: 'Введите пароль' %>
