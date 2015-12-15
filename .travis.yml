@@ -8,3 +8,4 @@ services:
 
 before_script:
   - psql -c 'create database flashcards_test;' -U postgres
+  - bin/rake db:migrate RAILS_ENV=test
