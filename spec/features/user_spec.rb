@@ -36,5 +36,6 @@ describe  "Users", :type => :feature do
       expect(page).to have_content 'Успешно зашли'
     end
   end
+  
 
 end
