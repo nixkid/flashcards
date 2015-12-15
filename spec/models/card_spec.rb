@@ -29,4 +29,9 @@ describe Card do
     expect(@card.check_card("Он")).to be false
   end
   
+  subject { @card }
+
+  it { should respond_to(:content) }
+  it { should respond_to(:user_id) }
+  
 end

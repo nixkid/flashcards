@@ -8,7 +8,8 @@ development:
   encoding: unicode
   database: flashcards_dev
   pool: 5
-  username: <%= ENV['USERNAME'] %>
+  username: macbook 
+  # username: <%= ENV['USERNAME'] %>
   password: <%= ENV['PASSWORD'] %>
   host:     <%= ENV['IP'] %>
 
@@ -17,6 +18,7 @@ test:
   encoding: unicode
   database: flashcards_test
   pool: 5
-  username: <%= ENV['USERNAME'] %>
+  username: macbook
+  # username: <%= ENV['USERNAME'] %>
   password: <%= ENV['PASSWORD'] %>
   host:     <%= ENV['IP'] %>
