@@ -1,11 +1,10 @@
 class HomeController < ApplicationController
-
   def index
-    @card = Card.random_card.first
+    @card = current_user.cards.random_card.take
   end
   
   def check_translation
-    @card = Card.find(params[:card_id])
+    @card = current_user.cards.find(params[:card_id])
     if @card.check_card(params[:translate])
       p :right
       flash[:notice] = 'Все верно!'

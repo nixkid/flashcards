@@ -1,0 +1,8 @@
+<%= simple_form_for @user do |f| %>
+  <%= render 'shared/errors' %>
+  
+  <%= f.input :email, label: 'Введите емэйл' %>
+  <%= f.input :password, label: 'Введите пароль' %>
+  <%= f.input :password_confirmation, label: 'Повторите пароль' %>
+  <%= f.submit 'Зарегистрироваться', class: "btn btn-primary" %>
+<% end %>

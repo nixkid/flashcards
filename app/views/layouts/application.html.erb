@@ -15,8 +15,15 @@
           <h1><%= link_to "Флэшкарточкер", root_path %></h1>
           <nav class="navigation-links">
             <ul class="nav navbar-nav pull-right">
-              <li><%= link_to "Все карточки", cards_path %></li>
-              <li><%= link_to "Добавить карточку", new_card_path %></li>
+              <% if current_user %>
+                <li><%= link_to "Все карточки", cards_path %></li>
+                <li><%= link_to "Добавить карточку", new_card_path %></li>
+                <li><%= link_to "Изменить профиль", edit_user_path(current_user) %></li>
+                <li><%= link_to "Выйти", :logout, method: :post %></li>
+              <% else %>
+                <li><%= link_to "Регнуться", new_user_path %></li>
+                <li><%= link_to "Зайти", :login %></li>
+              <% end %>
             </ul>
           </nav>
         </div>

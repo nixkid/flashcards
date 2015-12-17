@@ -26,6 +26,8 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
+  # config.include Sorcery::TestHelpers::Rails::Integration
+  # config.include Sorcery::TestHelpers::Rails::Controller
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -39,4 +41,12 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+end
+
+def login(email, password)
+  visit cards_path
+  click_link "Зайти"
+  fill_in :email, with: email
+  fill_in :password, with: password
+  click_button "Login"
 end
