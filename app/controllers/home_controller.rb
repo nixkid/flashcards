@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @card = current_user.cards.take #.random_card
+    @card = current_user.cards.random_card.take
   end
   
   def check_translation

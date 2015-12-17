@@ -52,7 +52,7 @@ class CardsController < ApplicationController
   end
   
   def correct_user
-    @card = current_user.cards.find_by(id: params[:id])
-    redirect_to new_card_path if @cards.nil?
+   @card = current_user.cards.find_by(id: params[:id])
+   redirect_to new_card_path if @cards.nil?
   end
 end
