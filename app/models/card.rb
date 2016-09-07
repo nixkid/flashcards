@@ -13,8 +13,6 @@ class Card < ActiveRecord::Base
   validates :original_text, :translated_text, presence: true
   validates_with CompareValidator
 
-  scope :random_card, -> { where('review_date <= ?', Time.current).order('RANDOM()').take }
-
   def check_card(translate)
     if translated_text.mb_chars.downcase.strip == translate.mb_chars.downcase.strip
       set_review_date

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @card = current_user.cards.random_card
+    @card = current_user.cards.where('review_date <= ?', Time.current).order('RANDOM()').take || current_user.cards.order('RANDOM()').take
   end
 
   def check_translation
