@@ -31,11 +31,11 @@ describe  "Users", :type => :feature do
       user = FactoryGirl.create(:user)
       visit login_path
       fill_in 'email', :with => user.email
-      fill_in 'password', :with => 'nix'
+      fill_in 'password', :with => 'admin'
       click_button 'Login'
       expect(page).to have_content 'Успешно зашли'
     end
   end
-  
+
 
 end
