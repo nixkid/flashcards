@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Card do
   before(:each) do
     @card = create(:card)
-    @review = Date.current + 3.days
+    @review = Date.today + 3.days
   end
 
   it 'should set review date' do
